@@ -59,15 +59,36 @@
         &:hover {
             color: #598D66;
             }
+        &:focus {
+                background-color: #D4E8D9;
+                color:#2C2D35
+            }
+        &:active {
+                color: #376B44;
+            }
         }
         nobr {
             &:hover {
                 color: #598D66; 
             }
+            &:focus {
+                background-color: #D4E8D9;
+                color:#2C2D35
+            }
+            &:active {
+                color: #376B44;
+            }
         }
         svg {
             &:hover {
                 stroke: #598D66; 
+            }
+            &:focus {
+                background-color: #D4E8D9;
+                stroke: #598D66;
+            }
+            &:active {
+                stroke: #376B44;
             }
         }     
     }
@@ -81,6 +102,7 @@
         height: 621px;
         object-fit: cover;
         object-position: center;
+        flex-shrink: 1;
     }
     &__presentation {
         display: flex;
@@ -120,12 +142,28 @@
             color: white;
             background-color: #598D66;
         }
+        &:focus {
+            color: #598D66;
+            border: 1px solid #598D66;
+            background-color: #D4E8D9;
+        }
+        &:active {
+            background-color: #376B44;
+            color: #FFF;
+        }
     }
     &_yellow {
         background: #EEDB6D;
         max-width: 257px;
         &:hover {
             background: #FAEB97;
+        }
+        &:focus {
+            border: 1px solid #A38314;
+            background-color: #FAEB97;
+        }
+        &:active {
+            background-color: #D9B949;
         }
     }
 }
@@ -161,15 +199,25 @@
     background: #D4E8D9;   
     border: none;
     height: 43px;
-    max-width: 135px;
-    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 20px;
     cursor: pointer;
     transition: 0.3s;
     &:hover {
         color: #F4F6F5;
+        background-color: #598D66;
+    }
+    &:focus {
+        border: 2px solid #598D66;
+        background: #D4E8D9;
+        color: #2C2D35;
+    }
+    &:active{
+        color: #F4F6F5;
         background-color: #376B44;
     }
+
 }
 
 .picture {
@@ -241,6 +289,7 @@
 }
 .our-team {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     margin: 70px auto;
     &__picture {
@@ -317,6 +366,15 @@
         & a:hover{
             transform: scale(1.1);
         }
+        & svg path:hover {
+            fill: #598D66;
+        }
+        & svg path:focus {
+            fill: #D4E8D9;
+        }
+        & svg path:active {
+            fill: #376B44;
+        }
     }
     &__copyright {
         color: #86928B;
@@ -342,4 +400,43 @@
             color: #2C2D35;
         }
     }
+}
+@media (min-width: 511px) and (max-width:690px) {
+    .container {
+        padding: 0 39px 0 39px;
+    }
+    .menu {
+        &__nav {
+            ul {
+                max-width: 445px;
+                width: 100%;
+            }
+        }
+        &__item {
+            a {
+                font-size: 18px;
+            }
+        }
+        &__btn {
+            max-width: 210px;
+        }
+    }
+    .main {
+        &__img {
+            height: 380px;
+        }
+        &__header {
+            font-size: 40px;
+            line-height: 100%;
+        }
+    }
+    .btn {
+        height: 60px;
+    }
+    .reproduction {
+        &__header {
+            font-size: 30px;
+        }
+    }
+    
 }
