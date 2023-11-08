@@ -1,0 +1,50 @@
+.reproduction {
+    display: flex;
+    flex-direction: column;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        margin-top: 69px;
+    }
+    &__header {
+        font-size: 40px;
+        line-height: 110%; /* 44px */
+    }
+    &__origin {
+        display: flex;
+        justify-content: space-between;
+        max-width: 428px;
+        width: 100%;
+    }
+    &__cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        width: 100%;
+        gap: 30px;
+    }
+}
+@media (min-width: 778px) and (max-width:1109px) {
+    .reproduction {
+        &__header {
+            font-size: 30px;
+        }
+        &__cards-container {
+            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+        }
+    }
+}
+@media (min-width: 576px) and (max-width:777px) {
+    .reproduction {
+        &__top {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        &__header {
+            font-size: 24px;
+        }
+        &__cards-container {
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        }
+    }
+}

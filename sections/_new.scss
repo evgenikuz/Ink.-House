@@ -1,0 +1,68 @@
+.new {
+    margin-top: 70px;
+    height: 574px;
+    background-image: linear-gradient(to right, rgba(1, 2, 3, 0.8) 40%, transparent), url("../img/sad_man.jpg");
+    background-size: 115%;
+    background-position: top;
+    width: 100vw;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 70px 0;
+        max-width: 540px;
+        width:100%;
+    }
+    &__header-container {
+        display: flex;
+        gap: 20px;
+    }
+    &__logo {
+        height: 80px;
+    }
+    &__header {
+        color: #F4F6F5;
+        font-size: 40px; 
+    }
+    &__text {
+        color: #FFF;
+        font-size: 18px;
+        line-height: 150%; /* 27px */
+        margin-top: 20px;
+    }
+    &__btn {
+        margin-top: 20px;
+    }
+}
+@media (min-width: 778px) and (max-width:1109px) {
+    .new {
+        &__header {
+            font-size: 30px;
+            max-width: 370px;
+        }
+    }
+}
+@media (min-width: 576px) and (max-width:777px) {
+    .new {
+        background-size: 105%;
+        height: 410px;
+        &__logo {
+            height: 50px;
+        }
+        &__header {
+            font-size: 24px;
+            max-width: 261px;
+        }
+        &__content {
+            height: 410px;
+            padding: 50px 0;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 140%;
+            max-width: 510px;
+            margin-bottom: 20px;
+        }
+
+    }
+}

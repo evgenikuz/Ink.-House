@@ -1,0 +1,13 @@
+.logo {
+    a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    }
+    &__text {
+        color: #598D66;
+        font-size: 20px;
+        font-weight: 700;
+    }
+}

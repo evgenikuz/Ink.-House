@@ -1,0 +1,58 @@
+.btn {
+    font-size: 20px;
+    height: 65px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    &_green {
+        color: #598D66;
+        border: 1px solid #598D66;
+        background-color: transparent;
+        &:hover {
+            color: white;
+            background-color: #598D66;
+        }
+        &:focus {
+            color: #598D66;
+            border: 1px solid #598D66;
+            background-color: #D4E8D9;
+        }
+        &:active {
+            background-color: #376B44;
+            color: #FFF;
+        }
+    }
+    &_yellow {
+        background: #EEDB6D;
+        max-width: 257px;
+        &:hover {
+            background: #FAEB97;
+        }
+        &:focus {
+            border: 1px solid #A38314;
+            background-color: #FAEB97;
+        }
+        &:active {
+            background-color: #D9B949;
+        }
+    }
+}
+@media (min-width: 778px) and (max-width:1109px) {
+    .btn {
+        height: 60px;
+        &_yellow {
+            max-width: 210px;
+            width: 100%;
+        }
+    }
+}
+@media (min-width: 576px) and (max-width:777px) {
+    .btn {
+        height: 50px;
+        font-size: 16px;
+        &_yellow {
+            max-width: 178px;
+            width: 100%;
+        }
+    }
+}

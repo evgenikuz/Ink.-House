@@ -1,0 +1,14 @@
+.header {
+    background-color: #E1EDE6;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+@media (min-width: 576px) and (max-width:777px) {
+    .header {
+        height: 123px;
+    }
+}

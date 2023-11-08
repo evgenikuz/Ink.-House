@@ -1,0 +1,30 @@
+.filter__country {
+    border-radius: 20px;
+    background: #D4E8D9;   
+    border: none;
+    height: 43px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+        color: #F4F6F5;
+        background-color: #598D66;
+    }
+    &:focus {
+        border: 2px solid #598D66;
+        background: #D4E8D9;
+        color: #2C2D35;
+    }
+    &:active{
+        color: #F4F6F5;
+        background-color: #376B44;
+    }
+
+}
+@media (min-width: 576px) and (max-width:777px) {
+    .filter__country {
+        font-size: 18px;
+    }
+}

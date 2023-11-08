@@ -1,0 +1,126 @@
+.footer {
+    background-color:#E1EDE6;
+    height: 168px;
+    &__container {
+        max-width: 1110px;
+        width: 100%;
+        margin: 0 auto;
+        height: 168px;
+        padding: 23px 0 23px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__left-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__number {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+    &__responder {
+        color: #86928B;
+        font-size: 18px;
+    }
+    &__center {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);   
+        gap: 60px;
+        max-width: 445px;
+        width:100%;
+    }
+
+    &__right-side {
+        display: flex;
+        flex-direction: column;
+        max-width: 132px;
+        width: 100%;
+    }
+    &__icon-holder {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        & a {
+            transition: 0.3s;
+        }
+        & a:hover{
+            transform: scale(1.1);
+        }
+        & svg path:hover {
+            fill: #598D66;
+        }
+        & svg path:focus {
+            fill: #D4E8D9;
+        }
+        & svg path:active {
+            fill: #376B44;
+        }
+    }
+    &__copyright-holder {
+        display: flex;
+        flex-direction: column;
+    }
+    &__copyright {
+        color: #86928B;
+        font-size: 12px;
+        line-height: 120%; /* 14.4px */
+        margin-bottom: 6px;
+    }
+}
+@media (min-width: 778px) and (max-width:1109px) {
+    .footer {
+        height: 250px;
+        &__container {
+            padding: 23px 39px;
+            gap: 30px;
+        }
+        &__left-side {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+}
+@media (min-width: 576px) and (max-width:777px) {
+    .footer {
+        height: 319px;
+        &__container {
+            padding: 23px 33px;
+        }
+        &__left-side {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+        &__responder {
+            font-size: 16px;
+        }
+
+        &__center {
+            max-width: 100%;
+            padding: 30px 0 16px;
+            border-bottom: 1px solid #C3D1C6;
+        }
+        &__right-side {
+            padding-top: 16px;
+            max-width: 100vw;
+        }
+        &__icon-holder {
+            max-width: 132px;
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        &__copyright-holder {
+            flex-direction: row;
+            min-width: 176px;
+            margin: 0 auto;
+
+
+
+        }
+
+    }
+}
