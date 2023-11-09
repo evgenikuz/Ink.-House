@@ -48,13 +48,13 @@
         & a:hover{
             transform: scale(1.1);
         }
-        & svg path:hover {
+        & a:hover svg path {
             fill: #598D66;
         }
-        & svg path:focus {
+        & a:focus svg path {
             fill: #D4E8D9;
         }
-        & svg path:active {
+        & a:active svg path {
             fill: #376B44;
         }
     }

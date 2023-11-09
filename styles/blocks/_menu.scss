@@ -8,6 +8,7 @@
         ul {
         list-style: none;
         display: flex;
+        justify-content: space-between;
         max-width: 470px;
         width: 100%;
         gap: 60px;
@@ -92,13 +93,19 @@
         &__nav {
             border-top: 1px solid #C3D1C6;
             padding-top: 16px;
-            max-width: 100vw;
+            max-width: 710px;
             width: 100%;
             ul {
-                max-width: 100vw;
+                max-width: 710px;
                 width: 100%;
-
             }
+        }
+    }
+}
+@media (max-width:575px) {
+    .menu {
+        &__nav {
+            display:none;
         }
     }
 }
