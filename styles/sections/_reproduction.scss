@@ -53,3 +53,24 @@
         }
     }
 }
+@media (max-width:575px) {
+    .reproduction {
+        &__top {
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
+        &__header {
+            font-size: 24px;
+        }
+        &__origin {
+            // min-width: 384px; правильно так, но так едет верстка, а прокрутку мы делать не умеем
+            display: grid;
+            gap: 20px; // грид - замена скролу
+        }
+        &__cards-container {
+            grid-template-columns: minmax(290px, 1fr);
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.header-mobile {
+    display: none;
+}
+@media (max-width:575px) {
+    .header-mobile {
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 68px;
+        display: flex;
+        justify-content: space-between;
+        height: 62px;
+        width: 100vw;
+        background-color: #E1EDE6;
+        padding: 16px 15px;
+        &__burger-btn {
+            border: none;
+            background-color: transparent;
+            transition: 0.3s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        &__cart {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

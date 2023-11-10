@@ -56,3 +56,23 @@
         }
     }
 }
+@media (max-width:575px) {
+    .main {
+    grid-template-columns: minmax(285px, 1fr);
+        margin-top: 190px;
+        &__img {
+            display:none;
+        }
+        &__header {
+            font-size: 30px;
+            line-height: 100%;
+
+        }
+        &__description {
+            font-size: 14px;
+        }
+        &__btn {
+            max-width: 154px;
+        }
+    }
+}

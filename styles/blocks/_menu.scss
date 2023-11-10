@@ -104,8 +104,12 @@
 }
 @media (max-width:575px) {
     .menu {
+        height: 68px;
+        justify-content: center;
+        align-items: center;
+        padding: 17px 15px 16px 15px;
         &__nav {
-            display:none;
+            display: none;
         }
     }
 }
