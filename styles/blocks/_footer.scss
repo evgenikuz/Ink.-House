@@ -11,7 +11,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
     }
-    &__left-side {
+    &__contacts {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -24,15 +24,32 @@
         color: #86928B;
         font-size: 18px;
     }
-    &__center {
+    &__navigation {
         display: grid;
         grid-template-columns: repeat(3, 1fr);   
         gap: 60px;
         max-width: 445px;
         width:100%;
     }
-
-    &__right-side {
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    &__header {
+        margin-bottom: 6px;
+        font-size: 20px;
+    }
+    &__link {
+        text-decoration: none;
+        color: #86928B;
+        font-size: 18px;
+        line-height: 150%; /* 27px */
+        &:hover {
+            color: #2C2D35;
+        }
+    }
+    &__icons-info{
         display: flex;
         flex-direction: column;
         max-width: 132px;
@@ -89,7 +106,7 @@
         &__container {
             padding: 23px 33px;
         }
-        &__left-side {
+        &__contacts {
             flex-direction: row;
             justify-content: space-between;
             width: 100%;
@@ -100,12 +117,12 @@
         &__responder {
             font-size: 16px;
         }
-        &__center {
+        &__navigation {
             max-width: 100%;
             padding: 30px 0 16px;
             border-bottom: 1px solid #C3D1C6;
         }
-        &__right-side {
+        &__icons-info {
             padding-top: 16px;
             max-width: 100vw;
         }
@@ -120,11 +137,18 @@
             min-width: 176px;
             margin: 0 auto;
         }
+        &__link {
+            font-size: 16px;
+        }
 
     }
 }
 @media (max-width:575px) {
     .footer {
+        height: 395px;
+        &__container {
+            padding: 20px 15px;
+        }
         &__number {
             font-size: 16px;
             margin-bottom: 8px;
@@ -132,7 +156,7 @@
         &__responder {
             font-size: 16px;
         }
-        &__center {
+        &__navigation {
             max-width: 100%;
             padding: 30px 0 16px;
             border-bottom: 1px solid #C3D1C6;
@@ -140,7 +164,7 @@
             column-gap: 40px;
             row-gap: 20px;   
         }
-        &__right-side {
+        &__icons-info {
             padding-top: 16px;
             max-width: 100vw;
         }
@@ -154,6 +178,12 @@
             flex-direction: row;
             min-width: 176px;
             margin: 0 auto;
+        }
+        &__header {
+            font-size: 16px;
+        }
+        &__link {
+            font-size: 16px;
         }
 
     }

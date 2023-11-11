@@ -1,9 +1,10 @@
 .new {
     margin-top: 70px;
-    // height: 574px;
-    background-image: linear-gradient(to right, rgba(1, 2, 3, 0.8) 40%, transparent), url("../../img/sad_man.jpg");
-    background-size: 115%;
-    background-position: top;
+    height: 574px;
+    background-image: linear-gradient(to right, rgba(1, 2, 3, 0.8) 40%, transparent 70%), url("../../img/sad_man.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 30%;
     width: 100vw;
     &__content {
         display: flex;
@@ -51,7 +52,6 @@
 }
 @media (min-width: 576px) and (max-width:777px) {
     .new {
-        background-size: 105%;
         height: 410px;
         margin-top: 50px;
         &__logo {
@@ -76,24 +76,25 @@
 }
 @media (max-width:575px) {
     .new {
-    background-size: cover;
-    background-position: bottom left;
-    height: 553px;
-        &__content {
-            padding: 50px 0px;
-        }
-        &__logo {
-            height: 50px;
-        }
-        &__header {
-            font-size: 24px;
-            min-width: 230px;
-        }
-        &__text {
-            font-size: 16px;
-            line-height: 140%;
-            width: 100%;
-            margin-top: 10px;
-        }
+        background-image: linear-gradient(to right, rgba(1, 2, 3, 0.8), transparent), url("../../img/sad_man.jpg");
+        background-size: 225%;
+        background-position: 15% 45%;
+        height: 553px;
+            &__content {
+                padding: 50px 0px;
+            }
+            &__logo {
+                height: 50px;
+            }
+            &__header {
+                font-size: 24px;
+                min-width: 230px;
+            }
+            &__text {
+                font-size: 16px;
+                line-height: 140%;
+                width: 100%;
+                margin-top: 20px;
+            }
     }
 }
