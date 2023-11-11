@@ -43,9 +43,10 @@
 @media (min-width: 576px) and (max-width:777px) {
     .main {
         margin-top: 173px;
-        grid-template-columns: 195px 285px;
+        grid-template-columns: repeat(2, minmax(195px, 1fr));
         &__header {
             font-size: 36px;
+            min-width: 285px;
         }
         &__description {
             padding: 10px 0;

@@ -63,5 +63,8 @@
     .btn {
         height: 50px;
         font-size: 18px;
+        &_yellow {
+            max-width: 100%;
+        }
     }
 }

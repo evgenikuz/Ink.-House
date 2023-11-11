@@ -84,6 +84,7 @@
         font-size: 12px;
         line-height: 120%; /* 14.4px */
         margin-bottom: 6px;
+        margin-right: 3px;
     }
 }
 @media (min-width: 778px) and (max-width:1109px) {
@@ -149,6 +150,9 @@
         &__container {
             padding: 20px 15px;
         }
+        &__phone {
+            margin-top: 20px;
+        }
         &__number {
             font-size: 16px;
             margin-bottom: 8px;
@@ -158,7 +162,8 @@
         }
         &__navigation {
             max-width: 100%;
-            padding: 30px 0 16px;
+            padding-bottom: 16px;
+            margin-top: -38px;
             border-bottom: 1px solid #C3D1C6;
             grid-template-columns: 136px 96px;
             column-gap: 40px;
@@ -186,5 +191,8 @@
             font-size: 16px;
         }
 
+    }
+    .repro {
+        grid-column-start: 2;
     }
 }
