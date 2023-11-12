@@ -20,11 +20,33 @@
             &:hover {
                 transform: scale(1.1);
             }
-        }
+            &:hover svg path {
+                    fill: #598D66; 
+                }
+            &:focus svg path {
+                    background-color: #D4E8D9;
+                    fill: #598D66;
+                }
+            &:active svg path {
+                    fill: #376B44;
+                }
+            } 
         &__cart {
             &:hover {
                 transform: scale(1.1);
             }
+            svg {
+                &:hover {
+                    stroke: #598D66; 
+                }
+                &:focus {
+                    background-color: #D4E8D9;
+                    stroke: #598D66;
+                }
+                &:active {
+                    stroke: #376B44;
+                }
+            } 
         }
     }
 }

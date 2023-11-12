@@ -5,6 +5,7 @@
     margin: 70px auto;
     &__picture {
         height: 440px;
+        max-width: 341px;
         object-fit: cover;
         object-position: center;
     }
@@ -13,7 +14,7 @@
         flex-direction: column;
         justify-content: flex-end;
         margin-bottom: 44px;
-
+        max-width: 635px;
     }
     &__header {
         font-size: 40px;
@@ -45,9 +46,11 @@
         }
         &__content {
             margin-bottom: 0;
+            max-width: 100%;
         }
         &__picture {
             height: 510px;
+            max-width: 690px;
         }
         &__text {
             margin-top: 30px;
@@ -67,6 +70,7 @@
         }
         &__picture {
             height: 370px;
+            max-width: 510px;
         }
         &__content {
             margin-bottom: 0;
@@ -85,6 +89,7 @@
         }
         &__picture {
             height: 285px;
+            max-width: 100%;
         }
         &__content {
             margin-bottom: 0;
@@ -93,6 +98,7 @@
             width: 100%;
             max-width: 290px;
             gap: 25px;
+            flex-wrap: wrap;
         }
     }
 
