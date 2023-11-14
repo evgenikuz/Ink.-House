@@ -55,10 +55,12 @@
         &__header {
             font-size: 36px;
             width: 100%;
+            -webkit-line-clamp: 3;
         }
         &__description {
             padding: 10px 0;
             font-size: 16px;
+            -webkit-line-clamp: 5;
         }
         &__btn {
             max-width: 178px;
