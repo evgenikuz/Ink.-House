@@ -5,8 +5,8 @@
     margin: 70px auto;
     &__picture {
         height: 440px;
-        max-width: 341px;
-        object-fit: cover;
+        max-width: 361px;
+        object-fit: contain;
         object-position: center;
     }
     &__content {
@@ -19,12 +19,20 @@
     &__header {
         font-size: 40px;
         line-height: 110%; /* 44px */
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
     &__text {
         font-size: 18px;
         line-height: 150%; /* 27px */
         margin-top: 20px;
         margin-bottom: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
     &__photos {
         display: flex;
@@ -86,6 +94,7 @@
         &__text {
             font-size: 16px;
             line-height: 140%;
+            -webkit-line-clamp: 7;
         }
         &__picture {
             height: 285px;

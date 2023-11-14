@@ -7,4 +7,13 @@
     line-height: 100%;
     color: #2C2D35;
     scroll-behavior: smooth;
+    scroll-margin-top: 100px;
+}
+.d-none {
+    right: -100%;
+}
+@media (max-width:777px) {
+    * {
+        scroll-margin-top: 130px;
+    }
 }

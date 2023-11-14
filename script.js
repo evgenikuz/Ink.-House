@@ -1,8 +1,8 @@
-let button = document.querySelector('.burger');
+let button = document.querySelector('.header-mobile__burger-btn');
 
-let mobile = document.querySelector('.mobile-menu');
+let mobile = document.querySelector('.menu-mobile');
 
-let item = document.querySelectorAll('.item');
+let item = document.querySelectorAll('.menu-mobile__item');
 
 button.addEventListener('click', function() {
     mobile.classList.remove('d-none');

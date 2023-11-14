@@ -17,6 +17,7 @@
     &__header-container {
         display: flex;
         gap: 20px;
+        
     }
     &__logo {
         height: 80px;
@@ -24,12 +25,20 @@
     &__header {
         color: #F4F6F5;
         font-size: 40px; 
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
     &__text {
         color: #FFF;
         font-size: 18px;
         line-height: 150%; /* 27px */
         margin-top: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 }
 @media (min-width: 778px) and (max-width:1109px) {
@@ -89,12 +98,14 @@
             &__header {
                 font-size: 24px;
                 min-width: 230px;
+                -webkit-line-clamp: 3;
             }
             &__text {
                 font-size: 16px;
                 line-height: 140%;
                 width: 100%;
                 margin-top: 20px;
+                -webkit-line-clamp: 6;
             }
     }
 }

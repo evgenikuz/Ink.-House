@@ -1,12 +1,59 @@
 .menu-mobile {
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 100vw;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: #FFF;
+    top: 68px;
+    background-color: #E1EDE6;
     z-index: 100;
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    &__items {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    &__item {
+        text-decoration: none;
+        color: #2C2D35;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        transition: 0.3s;
+        &:hover {
+            transform: scale(1.1);
+            color: #598D66;
+            }
+        &:focus {
+                background-color: #D4E8D9;
+                color:#2C2D35
+            }
+        &:active {
+                color: #376B44;
+            }
+    }
+    &__close-btn {
+        margin: 16px 15px 30px;
+        cursor: pointer;
+        align-self: flex-start;
+        border: none;
+        background-color: transparent;
+        transition: 0.3s;
+        &:hover {
+            transform: rotate(90deg);
+        }
+        &:hover svg path {
+            fill: #598D66;
+        }
+        &:focus svg path {
+            fill: #598D66;
+            background-color: #D4E8D9;
+        }
+        &:active svg path {
+            fill: #376B44;
+        }
+
+    }
+
 }
