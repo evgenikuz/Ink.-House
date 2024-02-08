@@ -16,8 +16,10 @@ item.forEach(el => {
         mobile.classList.add('d-none');
     })
 })
-// запуск функции
-renderCard(art)
+// чтобы сразу отфильтровано было по франции
+let newData = art.filter(el => el.country.toLowerCase() === 'france')
+// запуск функции сразу с францией
+renderCard(newData)
 // передать данные из БД в карточку
 function renderCard(data) {
     data.forEach(el => {
@@ -64,11 +66,16 @@ function createCard(obj) {
 
 }
 
+//логика фильтры
 for(let el of countryButtons){
     el.addEventListener('click', function(){
         let btnCountryId = el.getAttribute('id').toLowerCase()
         let filteredArt = art.filter(el => el.country.toLowerCase() === btnCountryId)
         container.innerHTML = ''
-        createCard(filteredArt)
+        for(let btn of countryButtons) {
+            btn.classList.remove('active')
+        }
+        el.classList.add('active')
+        renderCard(filteredArt)
     })
 }

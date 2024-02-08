@@ -21,8 +21,13 @@
         color: #F4F6F5;
         background-color: #376B44;
     }
+    &.active {
+        color: #F4F6F5;
+        background-color: #376B44;
+    }
 
 }
+
 @media (max-width:777px) {
     .filter__country {
         font-size: 18px;
