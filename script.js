@@ -1,5 +1,7 @@
 // получить данные из БД
 import {data as art} from './data.js'
+// чтобы сразу отфильтровано было по франции
+let newData = art.filter(el => el.country.toLowerCase() === 'france')
 let button = document.querySelector('.header-mobile__burger-btn');
 let mobile = document.querySelector('.menu-mobile');
 let item = document.querySelectorAll('.menu-mobile__item');
@@ -16,8 +18,7 @@ item.forEach(el => {
         mobile.classList.add('d-none');
     })
 })
-// чтобы сразу отфильтровано было по франции
-let newData = art.filter(el => el.country.toLowerCase() === 'france')
+
 // запуск функции сразу с францией
 renderCard(newData)
 // передать данные из БД в карточку
