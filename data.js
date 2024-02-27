@@ -1,4 +1,4 @@
-export const data = [
+export let data = [
     {
         country: 'France',
         artist: 'Марсель Руссо',
@@ -6,6 +6,7 @@ export const data = [
         material: 'Холст, масло (50х80)',
         price: 14500,
         image: "./img/France/amur.webp",
+        addedToCart: false,
     },
     {
         country: 'France',
@@ -14,6 +15,7 @@ export const data = [
         material: 'Акрил, бумага (50х80) ',
         price: 16500,
         image: "./img/France/dogmadam.webp",
+        addedToCart: false,
     },
     {
         country: 'France',
@@ -22,6 +24,7 @@ export const data = [
         material: 'Цветная литография (40х60)',
         price: 20000,
         image: "./img/France/treatment.webp",
+        addedToCart: false,
     },
     {
         country: 'France',
@@ -30,6 +33,7 @@ export const data = [
         material: 'Бумага, акрил (50х80)',
         price: 12000,
         image: "./img/France/rose.webp",
+        addedToCart: false,
     },
     {
         country: 'France',
@@ -38,6 +42,7 @@ export const data = [
         material: 'Цветная литография (40х60)',
         price: 22500,
         image: "./img/France/birds.webp",
+        addedToCart: false,
     },
     {
         country: 'France',
@@ -46,6 +51,7 @@ export const data = [
         material: 'Цветная литография (40х60)',
         price: 20000,
         image: "./img/France/fish.webp",
+        addedToCart: false,
     },
     {
         country: 'Germany',
@@ -54,6 +60,7 @@ export const data = [
         material: 'Цветная литография (40х60)',
         price: 16000,
         image: "./img/Germany/abovecity.webp",
+        addedToCart: false,
     },
     {
         country: 'Germany',
@@ -62,6 +69,7 @@ export const data = [
         material: 'Холст, масло (50х80)',
         price: 14500,
         image: "./img/Germany/nestlings.webp",
+        addedToCart: false,
     },
     {
         country: 'Germany',
@@ -70,6 +78,7 @@ export const data = [
         material: 'Цветная литография (40х60)',
         price: 20000,
         image: "./img/Germany/leaf.webp",
+        addedToCart: false,
     },
     {
         country: 'Germany',
@@ -78,6 +87,7 @@ export const data = [
         material: 'Цветная литография (40х60)',
         price: 13000,
         image: "./img/Germany/colorfulbird.webp",
+        addedToCart: false,
     },
     {
         country: 'Germany',
@@ -86,6 +96,7 @@ export const data = [
         material: 'Бумага, акрил (50х80)',
         price: 20000,
         image: "./img/Germany/woodpeckers.webp",
+        addedToCart: false,
     },
     {
         country: 'Germany',
@@ -94,6 +105,7 @@ export const data = [
         material: 'Бумага, акрил (50х80)',
         price: 23000,
         image: "./img/Germany/water.webp",
+        addedToCart: false,
     },
     {
         country: 'England',
@@ -102,6 +114,7 @@ export const data = [
         material: 'Акварель, бумага (50х80)',
         price: 19500,
         image: "./img/England/moose.webp",
+        addedToCart: false,
     },
     {
         country: 'England',
@@ -110,6 +123,7 @@ export const data = [
         material: 'Цветная литография (40х60)',
         price: 17500,
         image: "./img/England/cliffs.webp",
+        addedToCart: false,
     },
     {
         country: 'England',
@@ -118,6 +132,7 @@ export const data = [
         material: 'Акварель, бумага (50х80)',
         price: 20500,
         image: "./img/England/river.webp",
+        addedToCart: false,
     },
     {
         country: 'England',
@@ -126,6 +141,7 @@ export const data = [
         material: 'Цветная литография (40х60)',
         price: 15500,
         image: "./img/England/parrot.webp",
+        addedToCart: false,
     },
     {
         country: 'England',
@@ -134,6 +150,7 @@ export const data = [
         material: 'Акварель, бумага (50х80)',
         price: 12500,
         image: "./img/England/nightfish.webp",
+        addedToCart: false,
     },
     {
         country: 'England',
@@ -142,5 +159,6 @@ export const data = [
         material: 'Цветная литография (40х60)',
         price: 21000,
         image: "./img/England/cat.webp",
+        addedToCart: false,
     },
 ];

@@ -25,7 +25,8 @@
                         <li class="menu__item"><a href=#reproduction>Репродукции</a></li>
                         <li class="menu__item"><a href=#new>Новинки</a></li>
                         <li class="menu__item"><a href=#our-team><nobr>О нас</nobr></a></li>
-                        <li class="menu__item"><a href=# aria-label="Перейти в корзину">
+                        <li class="menu__item basket"><a href=# aria-label="Перейти в корзину">
+                            <div class="basket__amount hidden">0</div>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2C2D35" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_3_994)">
                                 <path d="M9.25001 21.1667C9.75627 21.1667 10.1667 20.7563 10.1667 20.25C10.1667 19.7438 9.75627 19.3334 9.25001 19.3334C8.74375 19.3334 8.33334 19.7438 8.33334 20.25C8.33334 20.7563 8.74375 21.1667 9.25001 21.1667Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -52,7 +53,8 @@
                 </g>
                 </svg>
         </button>
-        <a class="header-mobile__cart" aria-label="Добавить в корзину" href="#">
+        <a class="header-mobile__cart basket" aria-label="Добавить в корзину" href="#">
+            <div class="basket__amount hidden">1</div>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2C2D35" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_3_994)">
                 <path d="M9.25001 21.1667C9.75627 21.1667 10.1667 20.7563 10.1667 20.25C10.1667 19.7438 9.75627 19.3334 9.25001 19.3334C8.74375 19.3334 8.33334 19.7438 8.33334 20.25C8.33334 20.7563 8.74375 21.1667 9.25001 21.1667Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -204,6 +206,56 @@
             <a class="menu-mobile__item" href="#our-team">О нас</a>
         </nav>
         
+    </div>
+    <div class="modal">
+        <div class="modal__header">
+            <button class="modal__close">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="close-btn">
+                    <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M6.75 6.75C6.94891 6.55109 7.2187 6.43934 7.5 6.43934C7.7813 6.43934 8.05109 6.55109 8.25 6.75L23.25 21.75C23.4489 21.9489 23.5606 22.2187 23.5606 22.5C23.5606 22.7813 23.4489 23.0511 23.25 23.25C23.0511 23.4489 22.7813 23.5606 22.5 23.5606C22.2187 23.5606 21.9489 23.4489 21.75 23.25L6.75 8.25C6.55109 8.05109 6.43934 7.7813 6.43934 7.5C6.43934 7.21869 6.55109 6.94891 6.75 6.75Z" fill="#2C2D35"/>
+                    <path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M23.25 6.75C23.4489 6.94891 23.5607 7.2187 23.5607 7.5C23.5607 7.7813 23.4489 8.05109 23.25 8.25L8.25001 23.25C8.0511 23.4489 7.78132 23.5606 7.50001 23.5606C7.21871 23.5606 6.94893 23.4489 6.75002 23.25C6.55111 23.0511 6.43936 22.7813 6.43936 22.5C6.43936 22.2187 6.5511 21.9489 6.75002 21.75L21.75 6.75C21.9489 6.55109 22.2187 6.43934 22.5 6.43934C22.7813 6.43934 23.0511 6.55109 23.25 6.75Z" fill="#2C2D35"/>
+                    </g>
+                    </svg>
+            </button>
+            <h2 class = "modal__title">Корзина</h2>
+        </div>
+        <div class="modal__main">
+            <div class = 'modal__cart-item cart-item'>
+                <img class="cart-item__img" src="./img/France/amur.webp">
+                <p class="cart-item__artist">Марсель Руссо</p>
+                <h3 class="cart-item__name">Охота Амура</h3>
+                <p class="cart-item__materials">Холст, масло (50х80)</p>
+                <p class="cart-item__price">14500 руб</p>
+                <button class="cart-item__delete-btn">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="close-btn">
+                    <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M6.75 6.75C6.94891 6.55109 7.2187 6.43934 7.5 6.43934C7.7813 6.43934 8.05109 6.55109 8.25 6.75L23.25 21.75C23.4489 21.9489 23.5606 22.2187 23.5606 22.5C23.5606 22.7813 23.4489 23.0511 23.25 23.25C23.0511 23.4489 22.7813 23.5606 22.5 23.5606C22.2187 23.5606 21.9489 23.4489 21.75 23.25L6.75 8.25C6.55109 8.05109 6.43934 7.7813 6.43934 7.5C6.43934 7.21869 6.55109 6.94891 6.75 6.75Z" fill="#2C2D35"/>
+                    <path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M23.25 6.75C23.4489 6.94891 23.5607 7.2187 23.5607 7.5C23.5607 7.7813 23.4489 8.05109 23.25 8.25L8.25001 23.25C8.0511 23.4489 7.78132 23.5606 7.50001 23.5606C7.21871 23.5606 6.94893 23.4489 6.75002 23.25C6.55111 23.0511 6.43936 22.7813 6.43936 22.5C6.43936 22.2187 6.5511 21.9489 6.75002 21.75L21.75 6.75C21.9489 6.55109 22.2187 6.43934 22.5 6.43934C22.7813 6.43934 23.0511 6.55109 23.25 6.75Z" fill="#2C2D35"/>
+                    </g>
+                    </svg>
+                </button>
+            </div>
+            <div class = 'modal__cart-item cart-item'>
+                <img class="cart-item__img" src="./img/France/amur.webp">
+                <p class="cart-item__artist">Марсель Руссо</p>
+                <h3 class="cart-item__name">Охота Амура</h3>
+                <p class="cart-item__materials">Холст, масло (50х80)</p>
+                <p class="cart-item__price">14500 руб</p>
+                <button class="cart-item__delete-btn">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="close-btn">
+                    <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M6.75 6.75C6.94891 6.55109 7.2187 6.43934 7.5 6.43934C7.7813 6.43934 8.05109 6.55109 8.25 6.75L23.25 21.75C23.4489 21.9489 23.5606 22.2187 23.5606 22.5C23.5606 22.7813 23.4489 23.0511 23.25 23.25C23.0511 23.4489 22.7813 23.5606 22.5 23.5606C22.2187 23.5606 21.9489 23.4489 21.75 23.25L6.75 8.25C6.55109 8.05109 6.43934 7.7813 6.43934 7.5C6.43934 7.21869 6.55109 6.94891 6.75 6.75Z" fill="#2C2D35"/>
+                    <path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M23.25 6.75C23.4489 6.94891 23.5607 7.2187 23.5607 7.5C23.5607 7.7813 23.4489 8.05109 23.25 8.25L8.25001 23.25C8.0511 23.4489 7.78132 23.5606 7.50001 23.5606C7.21871 23.5606 6.94893 23.4489 6.75002 23.25C6.55111 23.0511 6.43936 22.7813 6.43936 22.5C6.43936 22.2187 6.5511 21.9489 6.75002 21.75L21.75 6.75C21.9489 6.55109 22.2187 6.43934 22.5 6.43934C22.7813 6.43934 23.0511 6.55109 23.25 6.75Z" fill="#2C2D35"/>
+                    </g>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="modal__footer">
+            <button class="modal__clear-cart">Очистить корзину</button>
+            <p class="modal__total">Сумма вашего заказа: <span>3214432</span> руб.</P>
+            <button class="modal__checkout">Оформить заказ</button>
+        </div>
     </div>
 </body>
 <script src="script.js" type="module"></script>
