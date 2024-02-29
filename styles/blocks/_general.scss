@@ -10,7 +10,7 @@
     scroll-margin-top: 100px;
 }
 .hidden {
-    display: none;
+    display: none !important; 
 }
 .d-none {
     right: -100%;

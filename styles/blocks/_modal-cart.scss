@@ -1,0 +1,105 @@
+.blur {
+    filter: blur(4px);
+    z-index: 5;
+} 
+.modal{
+    position:fixed;
+    z-index: 10;
+    top: 30%;
+    width: 90%;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: white;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #598D66;
+    box-shadow: 5px 5px 10px #37433a ;
+    &__header {
+        display: flex;
+        width: 100%;
+        padding: 30px;
+        background-color: #e1ede6;
+    }
+    &__title {
+        width: 100%;
+        text-align: center;
+        align-self: center;
+        font-size: 30px;
+    }
+    &__close {
+        cursor: pointer;
+        align-self: flex-start;
+        border: none;
+        background-color: transparent;
+        transition: 0.3s;
+        &:hover {
+            transform: rotate(90deg);
+        }
+        &:hover svg path {
+            fill: #598D66;
+        }
+        &:focus svg path {
+            fill: #598D66;
+            background-color: #D4E8D9;
+        }
+        &:active svg path {
+            fill: #376B44;
+        }
+    }
+    &__main {
+        max-height: 250px;
+        overflow: scroll;
+        background-color: white;
+        padding: 15px 30px 0;
+    }
+}
+.cart-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #e1ede6;
+    &__order-totals {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    &__clear-cart {
+        max-width: 300px;
+    }
+    &__checkout {
+        max-width: 300px;
+    }
+}
+.cart-item {
+    margin-bottom: 15px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 75px repeat(4, minmax(100px, 200px)) 50px;
+    gap: 15px;
+    align-items: center;
+    &__img {
+        height: 100px;
+    }
+    &__delete-btn {
+        margin: 10px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        transition: 0.3s;
+        &:hover {
+            transform: rotate(90deg);
+        }
+        &:hover svg path {
+            fill: #598D66;
+        }
+        &:focus svg path {
+            fill: #598D66;
+            background-color: #D4E8D9;
+        }
+        &:active svg path {
+            fill: #376B44;
+        }
+    }
+}
