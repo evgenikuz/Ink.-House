@@ -86,7 +86,9 @@ for(let el of countryButtons){
         }
         el.classList.add('active')
         renderCard(filteredArt)
-        getFromLocalStorage(); // чтобы отображалось, что карточки добавлены
+        if(localStorage.cart) {
+            getFromLocalStorage(); // чтобы отображалось, что карточки добавлены
+        }
     })
 }
 
