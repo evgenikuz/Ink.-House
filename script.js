@@ -8,7 +8,7 @@ let item = document.querySelectorAll('.menu-mobile__item');
 let countryButtons = document.querySelectorAll('.filter__country');
 const container = document.querySelector('.reproduction__cards-container')
 let localStorage = window.localStorage;
-let basket = document.querySelector('.basket');
+let basket = document.querySelectorAll('.basket');
 let cartArray = [];
 let modal = document.querySelector('.modal')
 let closeBtn = document.querySelector('.modal__close')
@@ -147,45 +147,56 @@ function getFromLocalStorage() {
 }
 
 function changeCartAmount() {
-    let amountInCart = document.querySelector('.basket__amount')
+    let amountInCart = document.querySelectorAll('.basket__amount')
     if(cartArray.length) {
-        amountInCart.classList.remove('hidden')
-        amountInCart.innerHTML = cartArray.length;
+        amountInCart.forEach(amount => {
+            amount.classList.remove('hidden')
+            amount.innerHTML = cartArray.length;
+        })
+        
     } else {
-        amountInCart.classList.add('hidden')
-        amountInCart.innerHTML = '';
-        localStorage.clear()
+        amountInCart.forEach(amount => {
+            amount.classList.add('hidden')
+            amount.innerHTML = '';
+            localStorage.clear()
+        })
     }
 }
-basket.addEventListener('click', function() {
-    modal.classList.toggle('hidden');
-    blur.classList.toggle('blur');
-    cartPrice = 0;
-    const modalMain = document.querySelector('.modal__main');
-    cartArray.forEach(pic => {
-        const cartItem = document.createElement('div');
-        cartItem.className = "modal__cart-item cart-item"
-        cartItem.innerHTML = `
-        <img class="cart-item__img" src="${pic.image}">
-        <p class="cart-item__artist">${pic.artist}</p>
-        <h3 class="cart-item__name">${pic.title}</h3>
-        <p class="cart-item__materials">${pic.material}</p>
-        <p class="cart-item__price">${pic.price} руб</p>
-        <button class="cart-item__delete-btn">
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="close-btn">
-            <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M6.75 6.75C6.94891 6.55109 7.2187 6.43934 7.5 6.43934C7.7813 6.43934 8.05109 6.55109 8.25 6.75L23.25 21.75C23.4489 21.9489 23.5606 22.2187 23.5606 22.5C23.5606 22.7813 23.4489 23.0511 23.25 23.25C23.0511 23.4489 22.7813 23.5606 22.5 23.5606C22.2187 23.5606 21.9489 23.4489 21.75 23.25L6.75 8.25C6.55109 8.05109 6.43934 7.7813 6.43934 7.5C6.43934 7.21869 6.55109 6.94891 6.75 6.75Z" fill="#2C2D35"/>
-            <path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M23.25 6.75C23.4489 6.94891 23.5607 7.2187 23.5607 7.5C23.5607 7.7813 23.4489 8.05109 23.25 8.25L8.25001 23.25C8.0511 23.4489 7.78132 23.5606 7.50001 23.5606C7.21871 23.5606 6.94893 23.4489 6.75002 23.25C6.55111 23.0511 6.43936 22.7813 6.43936 22.5C6.43936 22.2187 6.5511 21.9489 6.75002 21.75L21.75 6.75C21.9489 6.55109 22.2187 6.43934 22.5 6.43934C22.7813 6.43934 23.0511 6.55109 23.25 6.75Z" fill="#2C2D35"/>
-            </g>
-            </svg>
-        </button>
-        `
-        cartPrice += pic.price;
-        modalMain.append(cartItem);
+basket.forEach(basket => {
+    basket.addEventListener('click', function() {
+        modal.classList.toggle('hidden');
+        blur.classList.toggle('blur');
+        cartPrice = 0;
+        const modalMain = document.querySelector('.modal__main');
+        if(cartArray.length) {
+            cartArray.forEach(pic => {
+                const cartItem = document.createElement('div');
+                cartItem.className = "modal__cart-item cart-item"
+                cartItem.innerHTML = `
+                <img class="cart-item__img" src="${pic.image}">
+                <p class="cart-item__artist">${pic.artist}</p>
+                <h3 class="cart-item__name">${pic.title}</h3>
+                <p class="cart-item__materials">${pic.material}</p>
+                <p class="cart-item__price">${pic.price} руб</p>
+                <button class="cart-item__delete-btn">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="close-btn">
+                    <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M6.75 6.75C6.94891 6.55109 7.2187 6.43934 7.5 6.43934C7.7813 6.43934 8.05109 6.55109 8.25 6.75L23.25 21.75C23.4489 21.9489 23.5606 22.2187 23.5606 22.5C23.5606 22.7813 23.4489 23.0511 23.25 23.25C23.0511 23.4489 22.7813 23.5606 22.5 23.5606C22.2187 23.5606 21.9489 23.4489 21.75 23.25L6.75 8.25C6.55109 8.05109 6.43934 7.7813 6.43934 7.5C6.43934 7.21869 6.55109 6.94891 6.75 6.75Z" fill="#2C2D35"/>
+                    <path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M23.25 6.75C23.4489 6.94891 23.5607 7.2187 23.5607 7.5C23.5607 7.7813 23.4489 8.05109 23.25 8.25L8.25001 23.25C8.0511 23.4489 7.78132 23.5606 7.50001 23.5606C7.21871 23.5606 6.94893 23.4489 6.75002 23.25C6.55111 23.0511 6.43936 22.7813 6.43936 22.5C6.43936 22.2187 6.5511 21.9489 6.75002 21.75L21.75 6.75C21.9489 6.55109 22.2187 6.43934 22.5 6.43934C22.7813 6.43934 23.0511 6.55109 23.25 6.75Z" fill="#2C2D35"/>
+                    </g>
+                    </svg>
+                </button>
+                `
+                cartPrice += pic.price;
+                modalMain.append(cartItem);
+            })
+            totalAmount.textContent = cartArray.length;
+            totalSum.textContent = cartPrice;
+        } else {
+            modalMain.innerHTML = 'Корзина пуста'
+        }
+    
     })
-    totalAmount.textContent = cartArray.length;
-    totalSum.textContent = cartPrice;
-
 })
 
 blur.addEventListener('click', function(e) {
@@ -199,7 +210,7 @@ blur.addEventListener('click', function(e) {
 closeBtn.addEventListener('click', function() {
     modal.classList.toggle('hidden')
     blur.classList.toggle('blur')
-    document.querySelector('.modal__main') = '';
+    document.querySelector('.modal__main').innerHTML = '';
 })
 
 modal.addEventListener('click', function(e) {
@@ -211,8 +222,12 @@ modal.addEventListener('click', function(e) {
         totalAmount.textContent = cartArray.length;
         totalSum.textContent = cartPrice;
         updateCardsButtons();
+        console.log(cartArray.length);
+        if (!cartArray.length) {
+            document.querySelector('.modal__main').innerHTML = 'Корзина пуста'
+        }
     } else if(e.target.closest('.cart-footer__clear-cart')) {
-        document.querySelector('.modal__main').innerHTML = '';
+        document.querySelector('.modal__main').innerHTML = 'Корзина пуста';
         cartArray = [];
         cartPrice = 0;
         totalAmount.textContent = 0;

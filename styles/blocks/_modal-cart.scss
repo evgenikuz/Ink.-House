@@ -53,6 +53,7 @@
         overflow: scroll;
         background-color: white;
         padding: 15px 30px 0;
+        text-align: center;
     }
 }
 .cart-footer {
@@ -60,10 +61,14 @@
     justify-content: space-between;
     padding: 30px;
     background-color: #e1ede6;
+    width: 100%;
     &__order-totals {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        margin-left: 10px;
+        margin-right: 10px;
+        min-width: 255px;
     }
     &__clear-cart {
         max-width: 300px;
@@ -76,14 +81,16 @@
     margin-bottom: 15px;
     width: 100%;
     display: grid;
-    grid-template-columns: 75px repeat(4, minmax(100px, 200px)) 50px;
+    grid-template-columns: 75px repeat(4, minmax(80px, 1fr)) 30px;
     gap: 15px;
     align-items: center;
     &__img {
         height: 100px;
     }
+    &__price {
+        justify-self: end;
+    }
     &__delete-btn {
-        margin: 10px;
         cursor: pointer;
         border: none;
         background-color: transparent;
@@ -100,6 +107,74 @@
         }
         &:active svg path {
             fill: #376B44;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .modal {
+        &__title {
+            font-size: 25px;
+        }
+        &__main {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .cart-item {
+        grid-template-columns: 60px repeat(3, minmax(50px, 1fr)) 30px;
+        gap: 5px;
+        &__img {
+            height: 80px;
+        }
+        &__artist {
+            font-size: 12px;
+        }
+        &__name {
+            font-size: 13px;
+        }
+        &__price {
+            font-size: 12px;
+        }
+        &__materials {
+            display: none;
+        }
+        &__delete-btn {
+            svg {
+            height: 20px;
+            width: 20px;
+            }
+           
+        }
+    }
+    .cart-footer {
+        flex-wrap: wrap;
+        &__order-totals {
+            order: -1;
+            align-self: stretch;
+            margin: 0 0 15px;
+            max-width: 500px;
+            flex-grow: 2;
+            width: 100%;
+            font-size: 12px;
+        }
+        &__clear-cart {
+            align-self: stretch;
+            max-width: 100%;
+            margin-bottom: 15px;
+        }
+        &__checkout {
+            align-self: stretch;
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .cart-item {
+        grid-template-columns: 40px repeat(3, minmax(50px, 1fr)) 25px;
+        &__img {
+            height: 50px;
         }
     }
 }
